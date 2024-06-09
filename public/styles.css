@@ -1,0 +1,36 @@
+body {
+    font-family: 'Times New Roman', Times;
+    font-style: italic;
+    color: white;
+    background-color: #2f343f;
+    font-size: 18px;
+}
+
+hr {
+    color: white;
+    width: 80vw;
+    max-width: 800px;
+}
+
+a {
+    color: lightblue;
+}
+
+li {   
+    list-style: none; 
+    margin: 10px;
+}
+
+.logo {
+    border-radius: 2%;
+    width: 60vw;
+    max-width: 600px;
+    margin:auto;
+}
+
+.div_communities{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}

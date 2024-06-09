@@ -1,0 +1,53 @@
+
+╭╮╱╭┳━━━┳━━━╮╱╱╱╱╱╱╭╮╱╱╭╮
+┃┃╱┃┃╭━╮┃╭━╮┃╱╱╱╱╱╱┃┃╱╱┃┃
+┃┃╱┃┃╰━━┫╰━╯┣━━┳━┳━╯┣┳━╯┣━━╮
+┃┃╱┃┣━━╮┃╭━━┫┃━┫╭┫╭╮┣┫╭╮┃╭╮┃
+┃╰━╯┃╰━╯┃┃╱╱┃┃━┫┃┃╰╯┃┃╰╯┃╰╯┃
+╰━━━┻━━━┻╯╱╱╰━━┻╯╰━━┻┻━━┻━━╯
+---------------------------------------------------------------------------------------------------
+
+// Ian Bezerra // 
+
+------------------------------------------------------------------
+
+
+
+-> Getting the thing running...
+
+$ npm init -y
+
+
+$ npm install express node-fetch
+
+-> To run (On Home Directory)
+
+$ node server.js
+
+------------------------------------------------------------------
+
+app_folder/
+│
+├── public/              # Public directory for static files
+│   ├── index.html       # Main HTML file(static)
+│   ├── app.js           # JavaScript file for front-end logic
+│   ├── styles.css       # CSS file
+│   ├── post.html        # Make new Posts
+│   ├── c1.html          # Comunity and comments...
+│   └── c1_app.js        # Comments to datase
+│
+├── db/                  # Directory to store database file
+│   └── post_lib.json    # JSON file to store posts
+│   └── im/              # Image Directory
+│
+│
+└── server.js            # Server file
+
+------------------------------------------------------------------
+
+
+
+
+
+
+
