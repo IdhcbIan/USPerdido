@@ -1,13 +1,10 @@
 :root {
-    --orange: #fcb421;
-    --lblue: #64c4d2;
-    --blue: #1094ab;
-    --gray: #918f8f;
-    --white: #ffffff;
-}
-
-body {
-    background: linear-gradient(to right,
+    --orange: rgb(252, 180, 33);
+    --lblue: rgb(100, 196, 210);
+    --blue: rgb(16, 148, 171);
+    --gray: rgb(145, 143, 143);
+    --white: rgb(255, 255, 255);
+    --gradient: linear-gradient(to right,
                 var(--orange) 0, var(--orange) 2.5%,
                 var(--lblue) 5%, var(--lblue) 7.5%,
                 var(--blue) 10%, var(--blue) 12%,
@@ -15,6 +12,10 @@ body {
                 var(--blue) 88%, var(--blue) 90%,
                 var(--lblue) 92.5%, var(--lblue) 95%,
                 var(--orange) 97.5%, var(--orange) 100%);
+}
+
+body {
+    background: var(--gradient);
     font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
@@ -85,4 +86,16 @@ hr {
 
     background-position: center;
     background-size: cover;
+}
+
+/* Animations */
+
+.hover_effect {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.hover_effect_box {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
 }
