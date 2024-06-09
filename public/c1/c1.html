@@ -7,43 +7,53 @@
 <body>
     <!--Header-->
     <div class="div_logo">
-        <img src="logo.webp" alt="Cover Image" class="logo"> 
-        <h1>Comunidade 1</h1>
+        <img src="logo.webp" alt="Cover Image" class="logo">
+        <h1 style="margin-right: 20px;">Comunidade 1</h1>
+        <a href="../index.html">Voltar</a>
+
     </div>
     <hr>
 
-    <!--Comunity description...-->
+    <!--Community description...-->
     <div class="div_description">
-        <p>Comunity description...</p>
+        <p>Community description...</p>
     </div>
-    <hr> 
+    <hr>
 
     <!--Feed-->
-    <div class = "feed">
+    <div class="feed">
         <div class="post">
-            <p class="post_text">Saída da Arc!</p>
-            <img src="im/usp_teste.jpeg" class="post_img" alt="Test Image">
-            <div id="comments"></div>
-            <div class="div_input">
-                <input type="text" id="Email" placeholder="Email">
-                <input type="text" id="comment" placeholder="Comentário">
-                <button onclick="addComment()">Adicionar</button>
-                <script src="c1_comments.js"></script>
-            </div> 
+            <p class="post_text">Procurando Df/Dx</p>
+            <img src="im/test.jpg" class="post_img" alt="Test Image" onclick="enlargeImage(this)">
+            <div class="comments_section">
+                <div id="comments" class="comments"></div>
+                <div class="div_input">
+                    <input type="email" id="Email" placeholder="Email">
+                    <input type="text" id="comment" placeholder="Comentário">
+                    <button onclick="addComment()">Adicionar</button>
+                    <script src="c1_comments.js"></script>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
-
-<!--
-<div class = "feed">
-    <div class="post">
-            <h1>Add Comment</h1>
-            <input type="text" id="Email" placeholder="Enter your email">
-            <input type="text" id="comment" placeholder="Write you comment">
-            <button onclick="addComment()">Add</button>
-            <div id="comments"></div>
-            <script src="c1_comments.js"></script>
-    </div>
-</div>
--->

@@ -11,7 +11,15 @@ function addComment() {
         return;
     }
 
-    const commentData = { email, comment };
+    if (!validateEmail(email)) {
+        alert('Please enter a valid USP email address.');
+        return;
+    }
+
+    const username = email.split('@')[0];
+    const commentData = { email: username, comment };
+
+    console.log('Sending comment data:', commentData); // Debugging line
 
     fetch('/addComment', {
         method: 'POST',
@@ -22,23 +30,31 @@ function addComment() {
     })
     .then(response => response.json())
     .then(data => {
+        console.log('Server response:', data); // Debugging line
         if (data.success) {
             displayComment(commentData);
             document.getElementById('Email').value = '';
             document.getElementById('comment').value = '';
         } else {
-            alert('Error adding comment.');
+            alert('Error adding comment: ' + data.message);
         }
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('Error adding comment: ' + error.message);
     });
+}
+
+function validateEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@usp\.br$/i;
+    return emailRegex.test(email);
 }
 
 function loadComments() {
     fetch('/comments')
         .then(response => response.json())
         .then(data => {
+            console.log('Loaded comments:', data); // Debugging line
             data.forEach(comment => displayComment(comment));
         })
         .catch(error => {

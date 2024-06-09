@@ -1,36 +1,88 @@
+:root {
+    --orange: #fcb421;
+    --lblue: #64c4d2;
+    --blue: #1094ab;
+    --gray: #918f8f;
+    --white: #ffffff;
+}
+
 body {
-    font-family: 'Times New Roman', Times;
-    font-style: italic;
-    color: white;
-    background-color: #2f343f;
-    font-size: 18px;
+    background: linear-gradient(to right,
+                var(--orange) 0, var(--orange) 2.5%,
+                var(--lblue) 5%, var(--lblue) 7.5%,
+                var(--blue) 10%, var(--blue) 12%,
+                var(--white) 12.5%, var(--white) 87.5%,
+                var(--blue) 88%, var(--blue) 90%,
+                var(--lblue) 92.5%, var(--lblue) 95%,
+                var(--orange) 97.5%, var(--orange) 100%);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+
+    margin: unset;
+    padding: 12.5%;
+    padding: auto;
+    padding-top: unset;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
 }
 
 hr {
-    color: white;
-    width: 80vw;
-    max-width: 800px;
-}
-
-a {
-    color: lightblue;
-}
-
-li {   
-    list-style: none; 
-    margin: 10px;
+    color: var(--gray);
+    width: 30vw;
 }
 
 .logo {
     border-radius: 2%;
     width: 60vw;
     max-width: 600px;
-    margin:auto;
+    margin: 5vh;
 }
 
-.div_communities{
+.three_boxes {
+    width: 75vw;
+    height: 15vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box {
+    width: 15vw;
+    height: 15vw;
+
     display: flex;
     flex-direction: column;
-    justify-content: center; 
     align-items: center; 
+    justify-content: center;
+}
+
+.communities {
+    margin-top: 2.5vw;
+    width: 65vw;
+    height: 20vw;
+
+    display: grid;
+    align-items: center; 
+    justify-content: space-around;
+    grid: repeat(5, 1fr) / repeat(2, 1fr);
+    grid-gap: 5vh;
+}
+
+.community {
+    width: 30vw;
+    height: 20vw;
+    margin: unset;
+    border: unset;
+    border-radius: 5%;
+
+    background-position: center;
+    background-size: cover;
 }

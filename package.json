@@ -7,8 +7,19 @@
     "start": "node server.mjs"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
-  }
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdhcbIan/USPerdido.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdhcbIan/USPerdido/issues"
+  },
+  "homepage": "https://github.com/IdhcbIan/USPerdido#readme",
+  "description": ""
 }
-

@@ -6,12 +6,11 @@ import bodyParser from 'body-parser';
 const app = express();
 const PORT = 3000;
 
-// Correct usage of __dirname with ES6 modules
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const dbPath = path.join(__dirname, 'public', 'c1', 'c1_comments.json'); // Correct path to Database
+const dbPath = path.join(__dirname, 'public', 'c1', 'c1_comments.json');
 
 // Ensure directory exists
 const ensureDirectoryExistence = async (filePath) => {
@@ -27,18 +26,16 @@ const ensureDirectoryExistence = async (filePath) => {
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from /public
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Serve index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Endpoint to get comments
 app.get('/comments', async (req, res) => {
     try {
         const data = await fs.readFile(dbPath, 'utf8');
-        const comments = JSON.parse(data || '[]');
+        const comments = data ? JSON.parse(data) : [];
         res.json(comments);
     } catch (err) {
         if (err.code === 'ENOENT') {
@@ -50,9 +47,10 @@ app.get('/comments', async (req, res) => {
     }
 });
 
-// Endpoint to add comment
 app.post('/addComment', async (req, res) => {
     const { email, comment } = req.body;
+
+    console.log('Received request body:', req.body); // Debugging line
 
     if (!email || !comment) {
         return res.status(400).json({ success: false, message: 'Email and comment are required' });
@@ -60,11 +58,11 @@ app.post('/addComment', async (req, res) => {
 
     try {
         await ensureDirectoryExistence(dbPath);
-        
+
         let comments = [];
         try {
             const data = await fs.readFile(dbPath, 'utf8');
-            comments = JSON.parse(data);
+            comments = data ? JSON.parse(data) : [];
         } catch (err) {
             if (err.code !== 'ENOENT') throw err;
         }
@@ -72,9 +70,11 @@ app.post('/addComment', async (req, res) => {
         comments.push({ email, comment });
         await fs.writeFile(dbPath, JSON.stringify(comments, null, 2));
 
+        console.log('Updated comments:', comments); // Debugging line
+
         res.json({ success: true });
     } catch (err) {
-        console.error(err);
+        console.error('Error:', err); // Improved error logging
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 });
