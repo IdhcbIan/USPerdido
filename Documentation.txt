@@ -32,9 +32,12 @@ app_folder/
 │   ├── index.html       # Main HTML file(static)
 │   ├── app.js           # JavaScript file for front-end logic
 │   ├── styles.css       # CSS file
-│   ├── post.html        # Make new Posts
-│   ├── c1.html          # Comunity and comments...
-│   └── c1_app.js        # Comments to datase
+│   ├── /c1               
+│     ├── c1.html          # Comunity and comments...
+│     └── c1_app.js        # Comments to datase
+│   ├── /MakePost
+│     ├── MP.html          # Make post
+│     └── MP.js        
 │
 ├── db/                  # Directory to store database file
 │   └── post_lib.json    # JSON file to store posts

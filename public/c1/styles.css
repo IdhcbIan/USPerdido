@@ -9,6 +9,7 @@ body {
 .div_logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
     background-color: #3a3f4a;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -19,10 +20,25 @@ body {
     margin-right: 20px;
 }
 
-h1 {
-    margin: 0;
+.div_logo h1 {
     font-size: 24px;
     color: #ffffff;
+    margin: 0;
+}
+.header_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000;
+      }
+
+.header_link:hover {
+    text-decoration: underline;
 }
 
 .div_description {
@@ -39,17 +55,23 @@ h1 {
 }
 
 .post {
-    background-color: #3a3f4a;
+    background-color: #555a65;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
-.post_text {
-    font-size: 18px;
+.post_title {
+    font-size: 22px;
     color: #ffffff;
     margin-bottom: 10px;
+}
+
+.post_body {
+    font-size: 16px;
+    color: #dddddd;
+    margin-bottom: 20px;
 }
 
 .post_img {
@@ -60,13 +82,19 @@ h1 {
 }
 
 .comments_section {
-    border-left: 2px solid #dddddd;
-    padding-left: 10px;
+    border-top: 2px solid #dddddd;
+    padding-top: 10px;
     margin-top: 20px;
+    background-color: #666b75;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .comments {
     margin-bottom: 20px;
+    background-color: #444955;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .comments p {
@@ -144,4 +172,3 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
-gg

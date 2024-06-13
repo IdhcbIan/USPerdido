@@ -2,15 +2,17 @@
 <html>
 <head>
     <title>USPerdido - Cauculo 1</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 <body>
     <!--Header-->
     <div class="div_logo">
-        <img src="logo.webp" alt="Cover Image" class="logo">
-        <h1 style="margin-right: 20px;">Cauculo 1</h1>
-        <a href="../index.html">Voltar</a>
-
+        <img src="../logo.webp" alt="Cover Image" class="logo">
+        <h1>Cauculo 1</h1>
+        <div class="header_links">
+            <a href="../index.html" class="header_link">Voltar</a>
+            <a href="../MakePost/MP.html" class="header_link">Make a Post</a>
+        </div>
     </div>
     <hr>
 
@@ -21,21 +23,7 @@
     <hr>
 
     <!--Feed-->
-    <div class="feed">
-        <div class="post">
-            <p class="post_text">Procurando Df/Dx</p>
-            <img src="im/test.jpg" class="post_img" alt="Test Image" onclick="enlargeImage(this)">
-            <div class="comments_section">
-                <div id="comments" class="comments"></div>
-                <div class="div_input">
-                    <input type="email" id="Email" placeholder="Email">
-                    <input type="text" id="comment" placeholder="Comentário">
-                    <button onclick="addComment()">Adicionar</button>
-                    <script src="c1_comments.js"></script>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="feed" id="feed"></div>
 
     <!-- Modal for enlarged image -->
     <div id="imageModal" class="modal">
@@ -43,6 +31,7 @@
         <img class="modal-content" id="modalImage">
     </div>
 
+    <script src="c1_app.js"></script>
     <script>
         function enlargeImage(img) {
             const modal = document.getElementById("imageModal");
