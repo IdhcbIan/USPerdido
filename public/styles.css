@@ -1,30 +1,20 @@
 :root {
-    --orange: rgb(252, 180, 33);
-    --lblue: rgb(100, 196, 210);
-    --blue: rgb(16, 148, 171);
-    --gray: rgb(145, 143, 143);
-    --white: rgb(255, 255, 255);
-    --gradient: linear-gradient(to right,
-                var(--orange) 0, var(--orange) 2.5%,
-                var(--lblue) 5%, var(--lblue) 7.5%,
-                var(--blue) 10%, var(--blue) 12%,
-                var(--white) 12.5%, var(--white) 87.5%,
-                var(--blue) 88%, var(--blue) 90%,
-                var(--lblue) 92.5%, var(--lblue) 95%,
-                var(--orange) 97.5%, var(--orange) 100%);
+    --color1: rgb(48, 56, 65);
+    --color2: rgb(58, 71, 80);
+    --color3: rgb(246, 201, 14);
+    --color4: rgb(238, 238, 238);
 }
 
 body {
-    background: var(--gradient);
+    background-color: var(--color4);
+    color: var(--color1);
     font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5vw;
+    font-size: 30px;
 
-    margin: unset;
-    padding: 12.5%;
-    padding: auto;
-    padding-top: unset;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: column; 
@@ -33,31 +23,62 @@ body {
 }
 
 hr {
-    color: var(--gray);
-    width: 30vw;
+    color: var(--color1);
+    width: 35vw;
+    margin-bottom: 3vh
 }
 
-.logo {
-    border-radius: 2%;
-    width: 60vw;
-    max-width: 600px;
-    margin: 5vh;
-}
-
-.three_boxes {
-    width: 75vw;
-    height: 15vw;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+/* ---------- Menu ---------- */
+.menu {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100vw;
+    z-index: 999;
+    background-color: var(--color4);
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center; 
+    justify-content: flex-start;
 }
 
-.box {
-    width: 15vw;
-    height: 15vw;
+.menu_buttons {
+    background: unset;
+    color: gray;
+
+    margin: 1vw;
+    border: unset;
+}
+
+.menu_buttons:hover {
+    color: black;
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+}
+
+/* ---------- Logo ---------- */
+
+.logo {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("media/e1_usp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* ---------- Introduction ---------- */
+
+.intro {
+    height: 700px;
+    width: 100vw;
+    background-color: var(--color3);
 
     display: flex;
     flex-direction: column;
@@ -65,21 +86,59 @@ hr {
     justify-content: center;
 }
 
-.communities {
-    margin-top: 2.5vw;
-    width: 65vw;
-    height: 20vw;
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between; 
+    justify-content: center;
+    margin-top: 20px;
 
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.card {
+    background-color: var(--color2);
+    color: var(--color4);
+    margin: 1vw;
+    padding: 1.5vh;
+    border-radius: 50px;
+
+    width: 300px;       
+    height: 400px;      
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.slide_right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 2.5s ease-out,
+                opacity 2.5s ease-out;
+}
+
+/* ---------- Communities ---------- */
+.communities { 
+    margin: 40px; 
+    width: 65vw;
     display: grid;
     align-items: center; 
-    justify-content: space-around;
-    grid: repeat(5, 1fr) / repeat(2, 1fr);
-    grid-gap: 5vh;
+    justify-content: center;
+    grid: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-gap: 45px;
 }
 
 .community {
-    width: 30vw;
-    height: 20vw;
+    width: 400px;
+    height: 300px;
     margin: unset;
     border: unset;
     border-radius: 5%;
@@ -88,14 +147,23 @@ hr {
     background-size: cover;
 }
 
-/* Animations */
-
-.hover_effect {
+.community:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
 }
 
-.hover_effect_box {
-    transform: scale(1.08);
-    transition: transform 0.3s ease;
+/* ---------- Contact ---------- */
+
+.contact {
+    background-color: var(--color1);
+    color: var(--color4);
+    height: 100px;
+    width: 100vw;
+    padding-top: 50px;
+    padding-left: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
 }

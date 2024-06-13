@@ -6,60 +6,77 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <!--Menu-->
+    <div class="menu">
+        <button class="menu_buttons" id="home">
+            <img style="height: 50px;" src="media/name.png" alt="banner">
+        </button>
+        <button class="menu_buttons" id="info">Quem Somos</button>
+        <button class="menu_buttons" id="comu">Comunidades</button>
+        <button class="menu_buttons" id="cont">Contato</button>
+    </div>
+
     <!--Logo-->
-    <img class="logo" src="media/logo.png" alt="logo">
+    <div class="logo" id="logo">
+        <img style="width: 50vh;" src="media/main_logo.png" alt="banner">
+    </div>
 
     <!--Introduction-->
-    <p style="margin: unset;font-size:3vw;">Quem Somos?</p>
-    <hr>
-    
-    <div class="three_boxes">
-        <div class="box" style="background-color: var(--orange); margin-left: 6vw;">
-            <img src="media/mistery.png" style="width:40%; margin:3%"alt="mistery">
-            <p style="margin: unset; margin-left: 10%;">
-                Descrição desse cartão
-            </p>
+    <div class="intro" id="intro">
+        <p style="margin: unset;margin-top:70px;font-size:50px;">Quem Somos?</p>
+        <hr>
+        <div class="cards" id="cards">
+            <div class="card">
+                <img src="media/mistery.png" style="width:40%;"alt="mistery">
+                <p>
+                    Descrição desse cartão
+                </p>
+            </div>
+            <div class="card">
+                <img src="media/mistery.png" style="width:40%; margin:3%"alt="mistery">
+                <p>
+                    Descrição desse cartão
+                </p>
+            </div>
+            <div class="card">
+                <img src="media/mistery.png" style="width:40%; margin:3%"alt="mistery">
+                <p>
+                    Descrição desse cartão
+                </p>
+            </div>
         </div>
-        <div class="box" style="background-color: var(--lblue);">
-            <img src="media/mistery.png" style="width:40%; margin:3%"alt="mistery">
-            <p style="margin: unset; margin-left: 10%;">
-                Descrição desse cartão
-            </p>
-        </div>
-        <div class="box" style="background-color: var(--blue);">
-            <img src="media/mistery.png" style="width:40%; margin:3%"alt="mistery">
-            <p style="margin: unset; margin-left: 10%;">
-                Descrição desse cartão
-            </p>
-        </div>
-        <div class="box" style="background-color: var(--gray); margin-right: 6vw;">
-            <img src="media/mistery.png" style="width:40%; margin:3%"alt="mistery">
-            <p style="margin: unset; margin-left: 10%;">
-                Descrição desse cartão
-            </p>
-        </div>
-
     </div>
 
     <!--Communities-->
-    <p style="margin:unset; font-size:3vw;">Comunidades</p>
-    <hr>
-    <div class="communities">
-        <button class="community" style="background-image: url('media/communities/fisica_1.png');" id='community1'>
-        </button>
-        <button class="community" style="background-image: url('media/communities/calculo_1.png');" id='community2'>
+    <div id="communities"></div>
+        <p style="margin-bottom:unset;margin-top:70px; font-size:50px; text-align:center;">Comunidades</p>
+        <hr>
+        <div class="communities">
+            <button class="community" style="background-image: url('media/communities/fisica_1.png');" 
+            id='community1' onclick="window.location.href='c1/c1.html'">
+            </button>
+            <button class="community" style="background-image: url('media/communities/calculo_1.png');" 
+            id='community2' onclick="window.location.href='c1/c1.html'">
+        
+            </button>
+            <button class="community" style="background-image: url('media/communities/empty.jpg');" 
+            id='community3' onclick="window.location.href='c1/c1.html'">
+            </button>
+            <button class="community" style="background-image: url('media/communities/empty.jpg');" 
+            id='community4' onclick="window.location.href='c1/c1.html'">
+        
+            </button>
+            <button class="community" style="background-image: url('media/communities/empty.jpg');" 
+            id='community5' onclick="window.location.href='c1/c1.html'">
+            </button>
+        </div>
+    </div>
 
-        </button>
-        <button class="community"  id='community3'>
-
-        </button>
-        <button class="community"  id='community4'>
-
-        </button>
-        <button class="community"  id='community5'>
-
-        </button>
-
+    <!--Contact-->
+    <div class="contact" id="contact">
+        <p style="margin:0;">Contato:
+            <span style="font-size:20px; color:lightblue;padding-left: 25px;"> USPerdido@gmail.com</span>
+        </p>
     </div>
     <script src="main.js"></script>
 </body>
