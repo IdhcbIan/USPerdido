@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <h3>Comments</h3>
             <div id="comments_${index}" class="comments"></div>
             <div class="div_input">
-              <input type="email" placeholder="Email" id="email_${index}">
+              <input type="email" placeholder="Email USP" id="email_${index}">
               <input type="text" placeholder="Comentário" id="comment_${index}">
               <button onclick="addComment(${index})">Adicionar</button>
             </div>

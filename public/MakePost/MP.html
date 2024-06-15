@@ -2,16 +2,45 @@
 <html>
 <head>
     <title>Make a Post</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="make.css">
 </head>
 <body>
-    <h1>Create a New Post</h1>
-    <form id="postForm" enctype="multipart/form-data">
-        <input type="text" id="title" name="title" placeholder="Title" required><br>
-        <textarea id="content" name="content" placeholder="Content" required></textarea><br>
-        <input type="file" id="image" name="image"><br>
-        <button type="submit">Submit</button>
-    </form>
+    <!-- Header -->
+    <div class="div_logo">
+        <img src="../c1/media/logo.png" class="logo">
+        <h1 class="header_title">Create a New Post</h1>
+        <a href="../c1/c1.html" class="header_link header_voltar">Voltar</a>
+    </div>
+    <hr>
+
+    <!-- Form -->
+    <div class="feed">
+        <form id="postForm" enctype="multipart/form-data">
+            <input type="text" id="title" name="title" placeholder="Title" required class="post_title"><br>
+            <textarea id="content" name="content" placeholder="Content" required class="post_body"></textarea><br>
+            <input type="file" id="image" name="image" class="post_img"><br>
+            <button type="submit" class="header_link">Submit</button>
+        </form>
+    </div>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script src="MP.js"></script>
+    <script>
+        function enlargeImage(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
