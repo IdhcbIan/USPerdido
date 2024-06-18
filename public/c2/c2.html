@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USPerdido - Fisica 1</title>
+    <link rel="stylesheet" type="text/css" href="post.css">
+</head>
+<body>
+    <!--Header-->
+    <img src="media/logo.png" class="logo">
+    <div class="div_logo">
+        <h1 class="header_title">Fisica 1</h1>
+        <a href="../index.html" class="header_link header_voltar">Voltar</a>
+        <a href="../MakePost/MP.html" class="header_link header_make_post">Make a Post</a>
+    </div>
+    <hr>
+
+    <!--Community description...-->
+    <div class="div_description">
+        <p>Comunidade dedicada à 7600005 - Física I</p>
+    </div>
+    <hr>
+
+    <!--Feed-->
+    <div class="feed" id="feed">
+    </div>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="c2_app.js"></script>
+    <script>
+        function enlargeImage(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
