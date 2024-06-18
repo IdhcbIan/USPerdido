@@ -4,19 +4,19 @@
 ┃┃╱┃┃╰━━┫╰━╯┣━━┳━┳━╯┣┳━╯┣━━╮
 ┃┃╱┃┣━━╮┃╭━━┫┃━┫╭┫╭╮┣┫╭╮┃╭╮┃
 ┃╰━╯┃╰━╯┃┃╱╱┃┃━┫┃┃╰╯┃┃╰╯┃╰╯┃
-╰━━━┻━━━┻╯╱╱╰━━┻╯╰━━┻┻━━┻━━╯
+╰━━━┻━━━┻╯╱╱╰━━┻╯╰━━┻┻━━┻━━╯ Betta V1.0
 ---------------------------------------------------------------------------------------------------
 
 // Ian Bezerra // 
+- This is a Documentation file for the USPerdido First Betta V1.0
 
 ------------------------------------------------------------------
+-> Getting the thing running...(Installing stuff)
 
-
-
--> Getting the thing running...
-
+$ sudo apt install npm
 $ npm init -y
 
+-> Install node
 
 $ npm install express node-fetch
 
@@ -25,6 +25,7 @@ $ npm install express node-fetch
 $ node server.js
 
 ------------------------------------------------------------------
+// File System //
 
 app_folder/
 │
@@ -34,15 +35,15 @@ app_folder/
 │   ├── styles.css       # CSS file
 │   ├── /c1               
 │     ├── c1.html          # Comunity and comments...
+│     ├── post.css       # CSS file
 │     └── c1_app.js        # Comments to datase
+│   ├── db/                  # Directory to store database file
+│     └── c1_post.json    # JSON file to store posts
+│     └── im/              # Image Directory
 │   ├── /MakePost
 │     ├── MP.html          # Make post
+│     ├── make.css       # CSS file
 │     └── MP.js        
-│
-├── db/                  # Directory to store database file
-│   └── post_lib.json    # JSON file to store posts
-│   └── im/              # Image Directory
-│
 │
 └── server.js            # Server file
 
