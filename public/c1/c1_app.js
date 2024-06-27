@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="post_content">
             <h2 class="post_title">${post.title}</h2>
             <p class="post_body">${post.content}</p>
-            ${post.image ? `<img src="db/im/${post.image}" class="post_img" alt="${post.title}" onclick="enlargeImage(this)">` : ''}
+            ${post.image ? `<img src="db/im/${post.image}" class="post_img" alt="${post.title}">` : ''}
           </div>
           <div class="comments_section">
             <h3>Comments</h3>
